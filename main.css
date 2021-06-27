@@ -76,10 +76,10 @@ section{
 .top-bottom-section .image img{
     width: 100%;
 }
-.container{
+/* .container{
   display:flex;
   flex-direction: column;
-}
+} */
 .top-bottom-section .text{
 background-color: #d8e8e3;
   display:flex;
