@@ -12,9 +12,11 @@
 input[type=checkbox], label{
   display:none;
 }
-
 @media only screen and (max-width: 980px) {
+body{
+  overflow-x:hidden;
 
+}
   header{
     padding:20px 0px;}
   .logos{padding:0px;}
@@ -63,9 +65,11 @@ input[type=checkbox], label{
     font-size:15px;
     padding:10px 20px;
   }
-
+main{
+  /* width:500px; */
+}
 .left-right-section{
- width:750px;
+ width:800px;
  display: flex;
  flex-direction: column-reverse;
 
@@ -74,7 +78,7 @@ input[type=checkbox], label{
   .left-right-section text{
     font-size:40px;
     margin:0;
-    padding:0;
+    padding-bottom:20px;
     text-align:center;
   }
 .left-right-section image, .bottom-container image{
@@ -82,23 +86,36 @@ input[type=checkbox], label{
   margin:0 auto;
 }
 
+section {
+  display:flex;
+ width:100%;
+  flex-direction:column;
+}
+.top-bottom-section {
+  width:108%;
+  justify-content:center;
+}
 
-
+section .text {
+  /* padding:20px; */
+  text-align: center;
+}
 .bottom-container{
-  width:750px;
+ /* width:800px; */
   flex-direction:column-reverse;
   display:flex;
+  overflow:hidden;
+      align-items: center;
 }
-.bottom-container .wrapper{
-  margin:0;
-  padding:0;
-  font-size:10px;
-  text-align:center;
+/* .bottom-container .text{
+  /* text-align:center;
  }
 
 .bottom-container image{
   margin:0 auto;
- }
+
+ } */
+
  .footer{
     flex-direction:column;
   }
