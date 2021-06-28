@@ -58,7 +58,8 @@
     width: 100%;
     flex-direction: row-reverse;
 }
-section{display:flex;
+section{
+  display:flex;
 width:100%;
 flex-direction:row;
 }
@@ -67,6 +68,9 @@ flex-direction:row;
   width:50%;
   flex-direction:row;
 
+} */
+/* input[type="radio"], label{
+  display:none;
 } */
 .top-bottom-section {
   width:50%;
