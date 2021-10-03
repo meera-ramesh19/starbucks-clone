@@ -67,3 +67,8 @@
  .copyrights {
   padding-top:10px;
 }
+
+
+#content-mobile{
+  display:none;
+}

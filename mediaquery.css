@@ -12,10 +12,13 @@
 input[type=checkbox], label{
   display:none;
 }
-@media only screen and (max-width: 980px) {
-body{
+@media screen and (max-width: 980px) {
+ body{
   overflow-x:hidden;
 
+}
+main{
+    width:100%;
 }
   header{
     padding:20px 0px;}
@@ -74,7 +77,9 @@ main{
  flex-direction: column-reverse;
 
 }
-
+.message{
+  width:108%;
+}
   .left-right-section text{
     font-size:40px;
     margin:0;
@@ -101,10 +106,10 @@ section .text {
   text-align: center;
 }
 .bottom-container{
- /* width:800px; */
+ width:108%;
   flex-direction:column-reverse;
   display:flex;
-  overflow:hidden;
+  /* overflow:hidden; */
       align-items: center;
 }
 /* .bottom-container .text{
@@ -120,10 +125,139 @@ section .text {
     flex-direction:column;
   }
 
-  .lists-container{
+  /* .lists-container{
     max-width:160px;
     padding:5px;
     flex-direction:column;
+    } */
+    #content-desktop {
+    display: none;
+  }
+
+  #content-mobile {
+    display: block;
+    width:100%;
+  }
+    @supports not (-ms-ime-align: auto) {
+
+      details summary {
+        cursor: pointer;
+      }
+
+      details summary > * {
+        display: inline;
+      }
+
+      details > summary {
+
+      list-style-type: none;
+    }
+    summary::-webkit-details-marker {
+      display: none
     }
 
+    summary::after {
+    /*   content: "\005E" */
+      content:"►";
+    /*  content: "\25B2"; */
+    }
+    details[open] summary:after {
+      content: " ▼";
+    }
+      details{
+        margin: 1rem;
+      }
+      details ul{
+        list-style-type:none;
+
+      }
+      details ul li{
+        padding-bottom:10px;
+      }
+
   }
+}
+
+/*  summary {
+  font-weight: bold;
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+summary:focus {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  color: transparent;
+}
+summary:focus::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+  */
+
+  /* .accordionMenu{
+    width: 500px;
+    margin: 0 auto;
+}
+.accordionMenu input[type=radio]{
+    display: none;
+}
+.accordionMenu label{
+    display: block;
+    height: 50px;
+    line-height: 47px;
+    padding: 0 25px 0 10px;
+    background: #2c97de;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.accordionMenu label::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #ffffff;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 10;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.accordionMenu .content{
+    max-height: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+}
+.accordionMenu .content .inner{
+    font-size: 1.2rem;
+    color: #2c97de;
+    line-height: 1.5;
+    background: white;
+    padding: 20px 10px;
+}
+
+.accordionMenu input[type=radio]:checked + label:after{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.accordionMenu input[type=radio]:checked + label + .content{
+    max-height: 2000px;
+    height: auto;
+} */
